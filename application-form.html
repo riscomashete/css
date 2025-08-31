@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #form-container {
+      background: #fff;
+      max-width: 650px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #form-title {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    #form-container label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+
+    #form-container input,
+    #form-container select,
+    #form-container textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    #form-container input[type="file"] {
+      padding: 5px;
+    }
+
+    #form-container textarea {
+      resize: vertical;
+    }
+
+    #submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: orangered;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #submit-btn:hover {
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="form-container">
+    <h2 id="form-title">School Application Form</h2>
+    
+    <form id="application-form" action="submit.php" method="POST" enctype="multipart/form-data">
+      <!-- Personal Information -->
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="address">Home Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+264..." required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Academic Information -->
+      <label for="grade">Applying for Grade:</label>
+      <select id="grade" name="grade" required>
+        <option value="">--Select Grade--</option>
+        <option>Grade 8</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+        <option>Grade 11</option>
+        <option>Grade 12</option>
+      </select>
+
+      <label for="previous">Previous School:</label>
+      <input type="text" id="previous" name="previous">
+
+      <!-- Parent/Guardian Info -->
+      <label for="guardian">Parent/Guardian Name:</label>
+      <input type="text" id="guardian" name="guardian" required>
+
+      <label for="guardian_phone">Parent/Guardian Phone:</label>
+      <input type="tel" id="guardian_phone" name="guardian_phone" required>
+
+      <!-- File Uploads -->
+      <label for="birth_cert">Upload Birth Certificate (PDF/JPG):</label>
+      <input type="file" id="birth_cert" name="birth_cert" accept=".pdf, .jpg, .jpeg, .png" required>
+
+      <label for="school_report">Upload Latest School Report (PDF):</label>
+      <input type="file" id="school_report" name="school_report" accept=".pdf" required>
+
+      <label for="id_copy">Upload ID/Passport Copy (Optional):</label>
+      <input type="file" id="id_copy" name="id_copy" accept=".pdf, .jpg, .jpeg, .png">
+
+      <!-- Extra Notes -->
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" rows="3"></textarea>
+
+      <button id="submit-btn" type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
