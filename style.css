@@ -18,7 +18,17 @@
     line-height: 40px;
     display: inline-block; */
     
-}    
+}
+
+.opacity {
+      background: #c5c9fad0;
+      margin: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      opacity: .8;
+      color: black;
+    }
 
 .social .whatsapp {
     color: green;
@@ -117,7 +127,7 @@ h2, h3 {
     padding-bottom: 20rem;
     padding-top: 4rem;
     background-color: rgba(245, 245, 245, 0.324);
-    background-image: url('assets/gate.jpeg');
+    background-image: url('assets/gate2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
